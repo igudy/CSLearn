@@ -1,0 +1,32 @@
+.levels{
+	color: black;
+	text-align: center;
+	padding-bottom: 1px;
+
+}
+
+.img-responsive-image-levels{
+	border: none !important;
+	border-radius: 12px;
+  	width: 200px;
+  	height: 200px;
+}
+
+
+/*.img-responsive-levels{
+  margin: -50px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: 90px;
+  height:90px;
+}
+*/
+
+
+.segment-top h2{
+  	color: black;
+  	font-family: Poppins;
+  	text-transform: uppercase;
+  	text-align: center
+	font-size: 20px;
+	padding: 10px 12px;
+}

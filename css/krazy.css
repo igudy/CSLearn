@@ -1,0 +1,384 @@
+
+a:hover{
+  color: gray!important;
+}
+
+
+
+.krazy {
+    display: inline-block;
+    padding: 0px 0px 30px 0px;
+    height: 10px;
+}
+
+.krazy img {
+    display: inline-block;
+    padding: 0px 50px 50px 0px;
+    margin: -70px -50px -120px -60px;
+}
+
+.video {
+  height: 80px;
+  width: 80px;
+  float: left;
+  border: none;
+  border-radius: 6px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+
+/*Code for read more*/
+.read_more {
+  color: gray!important; 
+  text-transform: uppercase;
+  margin: 1px;
+  font-size: 13px;
+}
+
+
+/*code for margin before title*/
+
+
+/*This code is for the content of all posts*/
+.content{
+  font-size: 15px; 
+  font-family: New Times Romans;
+}
+
+
+/*Contact Chip*/
+.chip {
+    font-family: New Times Romans;
+    margin-bottom: 10px;
+    padding: 0px 1px;
+    height: 15px;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+}
+
+
+.chip img {
+    margin-bottom: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 80%;
+}
+
+
+/*For img-thumbnail*/
+/*This is for the thumbnail for the index page and the content page*/
+.img-responsive-image{
+  margin: -50px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: 450px;
+  height: 300px;
+}
+
+.img-responsive{
+  margin: -50px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: 90px;
+  height:90px;
+}
+
+
+/*For index*/
+.segment-title h2{
+  margin: 0px 0px 50px 0px;
+  color: #4D5DAD;
+  font-size: 15px;
+  font-family: Times New Roman, Comic Sans MS,Courgette;
+  text-transform: uppercase;
+}
+
+.segment-title h2:before{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+.segment-title h2:after{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+
+.segment-title ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.segment-title ul li{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 40px;
+}
+
+.segment-title ul li a{
+  color: #999;
+  text-decoration: none;
+}
+
+
+
+
+/*Segment-title music*/
+.segment-title-music h2{
+  margin: 0px 0px 50px 0px;
+  color: #4D5DAD;
+  font-size: 15px;
+  font-family: Times New Roman, Comic Sans MS,Courgette;
+  text-transform: uppercase;
+}
+
+.segment-title-music h2:before{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+.segment-title-music h2:after{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+
+.segment-title-music ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.segment-title-music ul li{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 40px;
+}
+
+.segment-title-music ul li a{
+  color: #4D5DAD;
+  text-decoration: none;
+}
+
+.segment-title-music a:hover{
+  color: gray;
+  text-decoration: none;
+}
+
+
+
+
+/*For segment title video*/
+.segment-title-video h2{
+  margin: 0px 0px 50px 0px;
+  color: #4D5DAD;
+  font-size: 15px;
+  font-family: Times New Roman, Comic Sans MS,Courgette;
+  text-transform: uppercase;
+}
+
+.segment-title-video h2:before{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+.segment-title-video h2:after{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+
+.segment-title-video ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.segment-title-video ul li{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 40px;
+}
+
+.segment-title-video ul li a{
+  color: gray;
+  text-decoration: none;
+}
+
+/*For segment title thread*/
+.segment-title-thread h2{
+  margin: 0px 0px 50px 0px;
+  color: #4D5DAD;
+  font-size: 15px;
+  font-family: Times New Roman, Comic Sans MS,Courgette;
+  text-transform: uppercase;
+}
+
+.segment-title-thread h2:before{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+.segment-title-thread h2:after{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+
+.segment-title-thread ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.segment-title-thread ul li{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 40px;
+}
+
+.segment-title-thread ul li a{
+  color: #999;
+  text-decoration: none;
+}
+
+
+
+/*For the gallery image*/
+div.gallery {
+    border: 4px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 4px solid #777;
+}
+
+
+/*Segment-title hotposts*/
+.segment-title-hotposts 
+h2{
+  margin: 0px 0px 10px 0px;
+  text-align: center;
+  color: green;
+  font-size: 15px;
+  font-family: Times New Roman, Comic Sans MS,Courgette;
+  text-transform: uppercase;
+}
+
+.segment-title-hotposts h2:before{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+.segment-title-hotposts h2:after{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+
+.segment-title-hotposts ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.segment-title-hotposts ul li{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 40px;
+}
+
+.segment-title-hotposts ul li a{
+  color: #999;
+  text-decoration: none;
+}
+
+/*Hotposts*/
+.hotposts {
+  width: 50%;
+  border-radius: 6px;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+/*Hotposts for others*/
+.segment-title-hotposts_others h2{
+  text-align: left;
+  margin: 0px 0px 10px 0px;
+  color: #4D5DAD;
+  font-size: 15px;
+  font-family: Times New Roman, Comic Sans MS,Courgette;
+  text-transform: uppercase;
+}
+
+.segment-title-hotposts_others h2:before{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+.segment-title-hotposts_others h2:after{
+  content: ' | ';
+  color: #4D5DAD;
+  padding-right: 5px;
+}
+
+.segment-title-hotposts_others ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.segment-title-hotposts_others ul li{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 40px;
+}
+
+.segment-title-hotposts_others ul li a{
+  color: #999;
+  text-decoration: none;
+}
+
+.hotposts_others {
+  height: 100px;
+  width: 100px;
+  float: left;
+  border: none;
+  border-radius: 6px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+/* Pagination */
+.pagination {
+    display: inline-block;
+
+}
+
+.pagination a {
+    font-family: 'Times New Romans';
+    font-size: 15px;
+    color: white !important;
+    background-color: #4D5DAD !important;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid white !important;
+}
+
+/*.pagination a.active {
+    background-color: #f0ad4e;
+    color: white;
+    border: 1px solid #f0ad4e;
+}*/
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+/*Download*/
+.download{
+  font-size: 13px !important;
+}
+
+.hotposts_first_image{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}

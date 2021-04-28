@@ -1,0 +1,141 @@
+/***************************************
+banner
+***************************************/
+
+.navbar {
+    margin-bottom: 0px;
+    border: 0px;
+}
+.navbar {
+    border-radius: 0px;
+}
+.navbar-default {
+    background-color: #fff;
+    padding: 20px 0;
+    transition: all 0.3s;
+}
+.navbar-default {
+    background-color: transparent;
+    border: 0px;
+}
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-brand
+{
+	font-family: Comic Sans MS, Times New Roman, cursive;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: white;
+}
+
+.navbar-brand img {
+    padding-top: 0px;
+    width: 120px !important;
+    height: 120px !important;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: white;
+}
+
+@media (max-width: 768px) {
+	.navbar-collapse {
+		background: rgba(28,74,90, 0.9);
+	}
+}
+
+.top-nav-collapse {
+    padding: 0;
+    background: rgba(28,74,90, 0.9);
+}
+
+.white, .white:hover, .white:focus
+{
+	color: #fff;
+	width: 100% !important;
+}
+.block
+{
+	display: block;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(12, 184, 182, 0.21);
+}
+.navbar-default .navbar-nav > li > a
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 300;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+{
+	color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(12, 184, 182, 0.21);
+}
+.affix {
+    background-color: #ffffff !important;
+}
+.affix .navbar-nav > li > a:hover, .affix .navbar-nav > li > a:focus
+{
+    background-color: rgba(12, 184, 182) !important;
+}
+
+#banner{
+	background: url('1.png') no-repeat fixed;
+	background-size: cover;
+	min-height: 100px;
+	position: relative;
+}
+@media (max-width: 2000px){
+  #banner{
+    background-attachment: scroll;
+  }
+}
+.bg-color{
+	background-color: RGBA(0, 0, 27, 0.7);
+	min-height: 150px;
+}
+
+/*This control how large the banner is ---- Take note of this!!!!!!!!!!!!!!!!!!!!!!!*/
+.banner-info{
+	padding-top: 100px;
+}
+.banner-logo img{
+	display: inline-block;
+}
+.banner-text{
+	color: #fff;
+}
+.banner-text h1{
+	font-family: 'Times New Roman', Comic Sans MS, Courgette;
+	font-size: 35px;
+	text-transform: uppercase;
+	padding-bottom:15px;
+}
+.btn-appoint, .btn-appoint:hover, .btn-appoint:focus{
+	margin-top: 30px;
+	padding: 10px 20px;
+	font-size: 12px;
+	background-color: rgba(12, 184, 182, 0.91);
+	border-radius: 3px;
+	color: #fff;
+}
+.overlay-detail a i {
+    text-align: center;
+    position: absolute;
+    bottom: 25px;
+    font-size: 38px;
+    color: #fff;
+    margin: 0 auto;
+}
+.text-primary i{
+    padding-top: 8px;
+    display: inline-block;
+}
+
