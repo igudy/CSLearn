@@ -55,10 +55,10 @@
 
 
                     $post_type          = $row['post_type'];
-                    $post_music         = $row['post_music'];
-                    $post_movies        = $row['post_movies'];
-                    $post_music_thumbnail = $row['post_music_thumbnail'];
-                    $post_movies_thumbnail = $row['post_movies_thumbnail'];
+                    $post_audio         = $row['post_audio'];
+                    $post_pdf        = $row['post_pdf'];
+                    $post_audio_thumbnail = $row['post_audio_thumbnail'];
+                    $post_pdf_thumbnail = $row['post_pdf_thumbnail'];
                     $post_video         = $row['post_video'];
                     $post_content       = $row['post_content'];
                     $post_tags          = $row['post_tags'];
@@ -77,14 +77,14 @@
                         </div>";
 
                         echo "
-                        <div style='margin: 60px;'></div><img class='img-responsive-image img-thumbnail'  src='music/music_thumbnail/$post_music_thumbnail' alt=''>
+                        <div style='margin: 60px;'></div><img class='img-responsive-image img-thumbnail'  src='music/music_thumbnail/$post_audio_thumbnail' alt=''>
 
                         <hr>";
 
 
                     echo "
                         <audio controls>
-                            <source src='$post_music' type='audio/mpeg' autostart='0'>
+                            <source src='$post_audio' type='audio/mpeg' autostart='0'>
                          </audio>";
 
 
@@ -96,7 +96,7 @@
                                     <p><i class='fa fa-clock-o'> $post_date</i></p>
                                 ";
 
-                    echo "<p><a href='$post_music' class='download' download='$post_music' alt='' ><span class='fa fa-download small'>Download Music</a></span>";
+                    echo "<p><a href='$post_audio' class='download' download='$post_audio' alt='' ><span class='fa fa-download small'>Download Music</a></span>";
 
 
 
@@ -136,14 +136,14 @@
                     ";
                     }
 
-                    // Movies
-                    else if ($post_type == 'movies') {
+                    // PDF
+                    else if ($post_type == 'pdf') {
                     echo "<div class='segment-title-video'>
                         <a href='post.php?p_id=$post_id'><h2><span class='fa fa-play'></span> $post_title  </h2></a>
                         </div>";
 
                         echo "
-                        <div style='margin: 60px;'></div><img class='img-responsive-image img-thumbnail'  src='movies/movies_thumbnail/$post_movies_thumbnail' alt=''>
+                        <div style='margin: 60px;'></div><img class='img-responsive-image img-thumbnail'  src='pdf/pdf_thumbnail/$post_pdf_thumbnail' alt=''>
 
                         <hr>";
 
@@ -155,7 +155,7 @@
                                     <p><i class='fa fa-clock-o'> $post_date</i></p>
                         ";
 
-                    echo "<p><a href='$post_movies' class='download' download='$post_movies' alt='' ><span class='fa fa-download small'>Download Movie</a></span>";
+                    echo "<p><a href='$post_pdf' class='download' download='$post_pdf' alt='' ><span class='fa fa-download small'>Download Movie</a></span>";
 
                     }
 

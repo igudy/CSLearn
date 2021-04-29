@@ -6,6 +6,7 @@ if(isset($_POST['create_post'])){
     $post_status = escape($_POST['post_status']);
     $post_type = escape($_POST['post_type']);
 
+
     $post_image_temp = $_FILES['image']['tmp_name'];
     $post_image = $_FILES['image']['name'];
     move_uploaded_file($post_image_temp, "../images/$post_image");
@@ -30,7 +31,7 @@ if(isset($_POST['create_post'])){
     move_uploaded_file($post_image_thread3_temp, "../images/threads/$post_image_thread3");
 
 
-    // Videos - Skit
+    // Videos - Tutorials
     $post_video_temp = $_FILES['video']['tmp_name'];
     $post_video = $_FILES['video']['name'];
     move_uploaded_file($post_video_temp, "../$post_video");
@@ -39,15 +40,15 @@ if(isset($_POST['create_post'])){
     $post_video_thumbnail = $_FILES['video_thumbnail']['name'];
     move_uploaded_file($post_video_thumbnail_temp, "../videos/videos_thumbnail/$post_video_thumbnail");
 
-    // Movies
-    $post_movies_temp = $_FILES['movies']['tmp_name'];
-    $post_movies = $_FILES['movies']['name'];
-    move_uploaded_file($post_movies_temp, "../$post_movies");
 
-    $post_movies_thumbnail_temp = $_FILES['movies_thumbnail']['tmp_name'];
-    $post_movies_thumbnail = $_FILES['movies_thumbnail']['name'];
-    move_uploaded_file($post_movies_thumbnail_temp, "../movies/movies_thumbnail/$post_movies_thumbnail");
+    //PDF's
+    $post_pdf_temp = $_FILES['pdf']['tmp_name'];
+    $post_pdf = $_FILES['pdf']['name'];
+    move_uploaded_file($post_pdf_temp, "../$post_pdf");
 
+    $post_pdf_thumbnail_temp = $_FILES['pdf_thumbnail']['tmp_name'];
+    $post_pdf_thumbnail = $_FILES['pdf_thumbnail']['name'];
+    move_uploaded_file($post_pdf_thumbnail_temp, "../pdf/pdf_thumbnail/$post_pdf_thumbnail");
 
     //Remember to always increase development upload size in php.ini
     //php development and php production file
@@ -58,14 +59,14 @@ if(isset($_POST['create_post'])){
     //post_max_size
 
 
-    $post_music_temp = $_FILES['music']['tmp_name'];
-    $post_music = $_FILES['music']['name'];
-    move_uploaded_file($post_music_temp, "../$post_music");
+    $post_audio_temp = $_FILES['audio']['tmp_name'];
+    $post_audio = $_FILES['audio']['name'];
+    move_uploaded_file($post_audio_temp, "../$post_audio");
 
 
-    $post_music_thumbnail_temp = $_FILES['music_thumbnail']['tmp_name'];
-    $post_music_thumbnail = $_FILES['music_thumbnail']['name'];
-    move_uploaded_file($post_music_thumbnail_temp, "../music/music_thumbnail/$post_music_thumbnail");
+    $post_audio_thumbnail_temp = $_FILES['audio_thumbnail']['tmp_name'];
+    $post_audio_thumbnail = $_FILES['audio_thumbnail']['name'];
+    move_uploaded_file($post_audio_thumbnail_temp, "../audio/audio_thumbnail/$post_audio_thumbnail");
 
 
     $post_tags = escape($_POST['post_tags']);
@@ -73,10 +74,10 @@ if(isset($_POST['create_post'])){
     $post_date = escape(date('Y-m-d h:i:sa'));
     
 
-    $query = "INSERT INTO posts(post_user, post_title, post_category_id, post_status, post_video, post_music, post_music_thumbnail, post_video_thumbnail, post_movies_thumbnail, post_movies, post_type, post_image, thread1, thread2, thread3, 
+    $query = "INSERT INTO posts(post_user, post_title, post_category_id, post_status, post_video, post_audio, post_audio_thumbnail, post_video_thumbnail, post_pdf, post_pdf_thumbnail, post_type, post_image, thread1, thread2, thread3, 
     post_tags, post_content, post_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($connection, $query);
-    mysqli_stmt_bind_param($stmt, 'ssisssssssssssssss', $post_user, $post_title, $post_category_id, $post_status, $post_video, $post_music, $post_music_thumbnail, $post_video_thumbnail, $post_movies_thumbnail, $post_movies, $post_type, $post_image, $post_image_thread1, $post_image_thread2, $post_image_thread3, $post_tags, $post_content, $post_date);
+    mysqli_stmt_bind_param($stmt, 'ssisssssssssssssss', $post_user, $post_title, $post_category_id, $post_status, $post_video, $post_audio, $post_audio_thumbnail, $post_video_thumbnail, $post_pdf, $post_pdf_thumbnail, $post_type, $post_image, $post_image_thread1, $post_image_thread2, $post_image_thread3, $post_tags, $post_content, $post_date);
     mysqli_stmt_execute($stmt);
 
 
@@ -141,9 +142,9 @@ if(isset($_POST['create_post'])){
             <option value="image">Select Options</option>
             <option value="image">Image</option>
             <option value="thread">Thread</option>
+            <option value="audio">Audio</option>
+            <option value="pdf">PDF</option>
             <option value="video">Video</option>
-            <option value="music">Music</option>
-            <option value="movies">Movies</option>
         </select>
  </div>  
   
@@ -171,19 +172,18 @@ if(isset($_POST['create_post'])){
         <label for="post_image_thread3">Thread 3</label>
         <input type="file" name="thread3">
     </div>
-
     <!-- End of thread -->
 
-    <!-- Music -->
-    <h1>Music</h1>
+    <!-- Audio -->
+    <h1>Audio</h1>
     <div class="form-group">
-        <label for="post_music">Post Music</label>
-        <input type="file" name="music">
+        <label for="post_audio">Post Audio</label>
+        <input type="file" name="audio">
     </div>
 
     <div class="form-group">
-        <label for="post_music_thumbnail">Post Music Thumbnail</label>
-        <input type="file" name="music_thumbnail">
+        <label for="post_audio_thumbnail">Post Audio Thumbnail</label>
+        <input type="file" name="audio_thumbnail">
     </div>
 
 
@@ -200,20 +200,17 @@ if(isset($_POST['create_post'])){
     </div>
 
 
-
-    <!-- Movies -->
-    <h1>Movies</h1>
+    <!-- PDF -->
+    <h1>PDF</h1>
     <div class="form-group">
-        <label for="post_movies">Post Movies</label>
-        <input type="file" name="movies">
+        <label for="post_pdf">Post PDF</label>
+        <input type="file" name="pdf">
     </div>
 
     <div class="form-group">
-        <label for="post_movies_thumbnail">Post Movies Thumbnail</label>
-        <input type="file" name="movies_thumbnail">
+        <label for="post_pdf_thumbnail">Post PDF Thumbnail</label>
+        <input type="file" name="pdf_thumbnail">
     </div>
-
-
 
 
     <div class="form-group">

@@ -104,9 +104,9 @@ if (isset($_POST['checkBoxArray'])) {
             <th>Date</th>
             <th>Type</th>
 
-            <!-- <th>Music</th>
+            <!-- <th>audio</th>
             <th>Video</th>
-            <th>Music Thumbnail</th>
+            <th>audio Thumbnail</th>
             <th>Video Thumbnail</th> -->
             <th>Edit</th>
             <th>Delete</th>
@@ -129,9 +129,9 @@ if (isset($_POST['checkBoxArray'])) {
             $post_image = $row['post_image'];
             $post_type = $row['post_type'];
             $post_tags = $row['post_tags'];
-            $post_music = $row['post_music'];
+            $post_audio = $row['post_audio'];
             $post_video = $row['post_video'];
-            $post_movies = $row['post_movies'];
+            $post_pdf = $row['post_pdf'];
             $post_content = $row['post_content'];
             $post_comment_count = $row['post_comment_count'];
             $post_date = $row['post_date'];
@@ -142,9 +142,9 @@ if (isset($_POST['checkBoxArray'])) {
             $post_image_thread3 = $row['thread3'];
 
 
-            $post_music_thumbnail = $row['post_music_thumbnail'];
+            $post_audio_thumbnail = $row['post_audio_thumbnail'];
             $post_video_thumbnail = $row['post_video_thumbnail'];
-            $post_movies_thumbnail = $row['post_movies_thumbnail'];
+            $post_pdf_thumbnail = $row['post_pdf_thumbnail'];
             $post_views_count   = $row['post_views_count'];
         
             echo "<tr>";
@@ -175,8 +175,8 @@ if (isset($_POST['checkBoxArray'])) {
             if($post_type === 'image'){
                 echo "<td><img width='100' height='150' src='../images/$post_image' alt='image'></td>";
             }
-            else if($post_type === 'music'){
-                echo "<td><img width='100' height='150' src='../music/music_thumbnail/$post_music_thumbnail' alt='image'></td>";
+            else if($post_type === 'audio'){
+                echo "<td><img width='100' height='150' src='../audio/audio_thumbnail/$post_audio_thumbnail' alt='image'></td>";
             }
             else if($post_type === 'video'){
                 echo "<td><img width='100' height='150' src='../videos/videos_thumbnail/$post_video_thumbnail' alt='image'></td>";
@@ -184,8 +184,8 @@ if (isset($_POST['checkBoxArray'])) {
             else if($post_type === 'thread'){
                 echo "<td><img width='100' height='150' src='../images/threads/$post_image_thread1' alt='image'></td>";
             }
-            else if($post_type === 'movies'){
-                echo "<td><img width='100' height='150' src='../movies/movies_thumbnail/$post_movies_thumbnail' alt='image'></td>";
+            else if($post_type === 'pdf'){
+                echo "<td><img width='100' height='150' src='../pdf/pdf_thumbnail/$post_pdf_thumbnail' alt='image'></td>";
             }
 
             else{

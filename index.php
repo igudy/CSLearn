@@ -1,10 +1,10 @@
-<!--  POWERFUL NOTE IN INDEX........The htaccess file only work on index page...The video, savage and music page...needs you
+<!--  POWERFUL NOTE IN INDEX........The htaccess file only work on index page...The video, savage and audio page...needs you
 to add .php to the files when reffering them because it goes to the directory if not, which is stupid -->
 
 
     <!--================Header Menu Area =================-->
     <?php include_once("includes/header.php"); ?>
-    <!--================Header Menu Area =================-->
+    <!--================Header Menu Area =================-->   
 
     
 
@@ -39,7 +39,7 @@ to add .php to the files when reffering them because it goes to the directory if
             <hr>
             <div class="segment-top">
                 
-                <h2 style="color: gray !important; padding-top: 30px; text-align: center; ">NEW POSTS</h2>
+                <h2 style="color: gray !important; padding-top: 30px; text-align: center; ">POSTS</h2>
                 <p></p>
             </div>
 
@@ -87,11 +87,11 @@ to add .php to the files when reffering them because it goes to the directory if
                     
                     $post_image_thread1 = $row['thread1'];
 
-                    $post_music = $row['post_music'];
+                    $post_audio = $row['post_audio'];
                     $post_video = $row['post_video'];
-                    $post_music_thumbnail = $row['post_music_thumbnail'];
+                    $post_audio_thumbnail = $row['post_audio_thumbnail'];
                     $post_video_thumbnail = $row['post_video_thumbnail'];
-                    $post_movies_thumbnail = $row['post_movies_thumbnail'];
+                    $post_pdf_thumbnail = $row['post_pdf_thumbnail'];
                     $post_content = substr($row['post_content'], 0,100);
                     $post_tags = $row['post_tags'];
                     $post_status = $row['post_status'];
@@ -103,16 +103,16 @@ to add .php to the files when reffering them because it goes to the directory if
                  <!-- First Blog Post -->
                  <?php
 
-                    if($post_type === 'music')
+                    if($post_type === 'audio')
                     {
-                        echo "<div class='segment-title-music'>
-                        <a href='post?p_id=$post_id'><h2><span class='fa fa-music'></span> $post_title  </h2></a>
+                        echo "<div class='segment-title-audio'>
+                        <a href='post?p_id=$post_id'><h2><span class='fa fa-audio'></span> $post_title  </h2></a>
                         </div>
 
 
                         
                         <div style='margin-top: -50px;'>
-                            <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='music/music_thumbnail/$post_music_thumbnail' alt='img';></a><span class='content'>$post_content</span>
+                            <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='audio/audio_thumbnail/$post_audio_thumbnail' alt='img';></a><span class='content'>$post_content</span>
 
                         <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
                         </div>
@@ -157,13 +157,13 @@ to add .php to the files when reffering them because it goes to the directory if
 
                     }
 
-                    else if($post_type === 'movies'){
+                    else if($post_type === 'pdf'){
                         echo "<div class='segment-title-video'>
                         <a href='post?p_id=$post_id'><h2><span class='fa fa-play'></span> $post_title </h2></a>
                         </div>
 
                         <div style='margin-top: -50px;'>
-                            <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='movies/movies_thumbnail/$post_movies_thumbnail' alt='img';></a><span class='content'>$post_content</span>
+                            <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='pdf/pdf_thumbnail/$post_pdf_thumbnail' alt='img';></a><span class='content'>$post_content</span>
                         
 
                     <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>

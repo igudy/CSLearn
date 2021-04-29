@@ -85,9 +85,9 @@ to add .php to the files when reffering them because it goes to the directory if
                     
                     $post_image_thread1 = $row['thread1'];
 
-                    $post_music = $row['post_music'];
+                    $post_audio = $row['post_audio'];
                     $post_video = $row['post_video'];
-                    $post_music_thumbnail = $row['post_music_thumbnail'];
+                    $post_audio_thumbnail = $row['post_audio_thumbnail'];
                     $post_video_thumbnail = $row['post_video_thumbnail'];
                     $post_movies_thumbnail = $row['post_movies_thumbnail'];
                     $post_content = substr($row['post_content'], 0,100);

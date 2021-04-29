@@ -47,9 +47,9 @@
                     
                     $post_image_thread1 = $row['thread1'];
 
-                    $post_music = $row['post_music'];
+                    $post_audio = $row['post_audio'];
                     $post_video = $row['post_video'];
-                    $post_music_thumbnail = $row['post_music_thumbnail'];
+                    $post_audio_thumbnail = $row['post_audio_thumbnail'];
                     $post_video_thumbnail = $row['post_video_thumbnail'];
                     $post_movies_thumbnail = $row['post_movies_thumbnail'];
                     $post_content = substr($row['post_content'], 0,100);
@@ -71,7 +71,7 @@
 
                         
                         <div style='margin-top: -50px;'>
-                            <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='music/music_thumbnail/$post_music_thumbnail' alt='img';></a><span class='content'>$post_content</span>
+                            <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='music/music_thumbnail/$post_audio_thumbnail' alt='img';></a><span class='content'>$post_content</span>
 
                         <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
                         </div>

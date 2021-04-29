@@ -23,11 +23,12 @@
 
 
 			$post_video_thumbnail 		= $row['post_video_thumbnail'];
-			$post_music 				= $row['post_music'];
-			$post_music_thumbnail 		= $row['post_music_thumbnail'];
+			$post_audio 				= $row['post_audio'];
+			$post_audio_thumbnail 		= $row['post_audio_thumbnail'];
 
-			$post_movies 				= $row['post_movies'];
-			$post_movies_thumbnail 		= $row['post_movies_thumbnail'];
+			// $post_movies 				= $row['post_movies'];
+			// $post_movies_thumbnail 		= $row['post_movies_thumbnail'];
+
 			$post_content 				= $row['post_content'];
 			$post_date 					= $row['post_date'];
 			$post_type 					= $row['post_type'];
@@ -45,17 +46,20 @@
         $post_image          =  $_FILES['image']['name'];
         $post_image_temp     =  $_FILES['image']['tmp_name'];
         
-        $post_music          =  $_FILES['music']['name'];
-        $post_music_temp     =  $_FILES['music']['tmp_name'];
+        $post_audio          =  $_FILES['audio']['name'];
+        $post_audio_temp     =  $_FILES['audio']['tmp_name'];
         
         $post_video          =  $_FILES['video']['name'];
         $post_video_temp     =  $_FILES['video']['tmp_name'];
 
-        $post_movies          =  $_FILES['movies']['name'];
-        $post_movies_temp     =  $_FILES['movies']['tmp_name'];
+        $post_pdf          =  $_FILES['pdf']['name'];
+        $post_pdf_temp     =  $_FILES['pdf']['tmp_name'];
+
+        // $post_movies          =  $_FILES['movies']['name'];
+        // $post_movies_temp     =  $_FILES['movies']['tmp_name'];
 
 
-	// Thread
+		// Thread
 	    // Thread 1
 	    $post_image_thread1 = $_FILES['thread1']['name'];
 	    $post_image_thread1_temp = $_FILES['thread1']['tmp_name'];
@@ -78,11 +82,11 @@
         $post_video_thumbnail          =  $_FILES['video_thumbnail']['name'];
         $post_video_thumbnail_temp     =  $_FILES['video_thumbnail']['tmp_name'];
         
-        $post_music_thumbnail          =  $_FILES['music_thumbnail']['name'];
-        $post_music_thumbnail_temp     =  $_FILES['music_thumbnail']['tmp_name'];
+        $post_audio_thumbnail          =  $_FILES['audio_thumbnail']['name'];
+        $post_audio_thumbnail_temp     =  $_FILES['audio_thumbnail']['tmp_name'];
 
-        $post_movies_thumbnail          =  $_FILES['movies_thumbnail']['name'];
-        $post_movies_thumbnail_temp     =  $_FILES['movies_thumbnail']['tmp_name'];
+        $post_pdf_thumbnail          =  $_FILES['pdf_thumbnail']['name'];
+        $post_pdf_thumbnail_temp     =  $_FILES['pdf_thumbnail']['tmp_name'];
 
         $post_tags           =  escape($_POST['post_tags']);
         $post_content        =  escape($_POST['post_content']);
@@ -91,16 +95,16 @@
 
         move_uploaded_file($post_image_temp, "../images/$post_image"); 
 
-        move_uploaded_file($post_music_temp, "$post_music"); 
+        move_uploaded_file($post_audio_temp, "$post_audio"); 
         move_uploaded_file($post_video_temp, "$post_video"); 
-        move_uploaded_file($post_movies_temp, "$post_movies");
+        move_uploaded_file($post_pdf_temp, "$post_pdf");
 
 
         move_uploaded_file($post_video_thumbnail_temp, "../videos/videos_thumbnail/$post_video_thumbnail"); 
-        move_uploaded_file($post_music_thumbnail_temp, "../music/music_thumbnail/$post_music_thumbnail"); 
-        move_uploaded_file($post_movies_thumbnail_temp, "../movies/movies_thumbnail/$post_movies_thumbnail"); 
+        move_uploaded_file($post_audio_thumbnail_temp, "../audio/audio_thumbnail/$post_audio_thumbnail"); 
+        move_uploaded_file($post_pdf_thumbnail_temp, "../pdf/pdf_thumbnail/$post_pdf_thumbnail"); 
         
-        if(empty($post_image) || empty($post_image_thread1) || empty($post_image_thread2) || empty($post_image_thread3) || empty($post_video_thumbnail) || empty($post_music_thumbnail)) {
+        if(empty($post_image) || || empty($post_pdf_thumbnail) empty($post_image_thread1)  || empty($post_image_thread2) || empty($post_image_thread3) || empty($post_video_thumbnail) || empty($post_audio_thumbnail)) {
         
         $query = "SELECT * FROM posts WHERE post_id = $the_post_id ";
         $select_image = mysqli_query($connection, $query);
@@ -113,17 +117,18 @@
            $post_image_thread2 = $row['thread2'];
            $post_image_thread3 = $row['thread3'];
 
-           // Music and video
+           // audio and video
            	$post_video_thumbnail 		= $row['post_video_thumbnail'];
-           	$post_movies_thumbnail 		= $row['post_movies_thumbnail'];
-			$post_music_thumbnail 		= $row['post_music_thumbnail'];
+           	$post_pdf_thumbnail 		= $row['post_pdf_thumbnail'];
+           	// $post_movies_thumbnail 		= $row['post_movies_thumbnail'];
+			$post_audio_thumbnail 		= $row['post_audio_thumbnail'];
         	}
 		}
         $post_title = mysqli_real_escape_string($connection, $post_title);
 
-		$query = "UPDATE posts SET post_title=?, post_category_id=?, post_date=?, post_user=?, post_type=?, post_music=?, post_video=?, post_movies=?, post_status=?, post_tags=?, post_content=?, post_image=?, thread1=?, thread2=?, thread3=?, post_music_thumbnail=?, post_video_thumbnail=?, post_movies_thumbnail=? WHERE post_id = ?";
+		$query = "UPDATE posts SET post_title=?, post_category_id=?, post_date=?, post_user=?, post_type=?, post_audio=?, post_video=?, post_pdf=?, post_status=?, post_tags=?, post_content=?, post_image=?, thread1=?, thread2=?, thread3=?, post_audio_thumbnail=?, post_video_thumbnail=?, post_pdf_thumbnail=? WHERE post_id = ?";
 		$stmt = mysqli_prepare($connection, $query);
-		mysqli_stmt_bind_param($stmt, 'ssssssssssssssssssi', $post_title, $post_category_id, $post_date, $post_user, $post_type, $post_music, $post_video, $post_movies, $post_status, $post_tags, $post_content, $post_image, $post_image_thread1, $post_image_thread2, $post_image_thread3, $post_music_thumbnail, $post_video_thumbnail, $post_movies_thumbnail, $the_post_id);
+		mysqli_stmt_bind_param($stmt, 'ssssssssssssssssssi', $post_title, $post_category_id, $post_date, $post_user, $post_type, $post_audio, $post_video, $post_pdf, $post_status, $post_tags, $post_content, $post_image, $post_image_thread1, $post_image_thread2, $post_image_thread3, $post_audio_thumbnail, $post_video_thumbnail, $post_pdf_thumbnail, $the_post_id);
 		mysqli_stmt_execute($stmt);
 
 		if(!$stmt){
@@ -203,35 +208,35 @@
 	    	<?php
 	    		if($post_type == 'image'){
 	    			echo "<option value='video'>Video</option>";
-	    			echo "<option value='music'>Music</option>";
+	    			echo "<option value='audio'>audio</option>";
 	    			echo "<option value='thread'>Thread</option>";
-	    			echo "<option value='movies'>Movies</option>";
+	    			echo "<option value='pdf'>PDF</option>";
 
 	    		}
 	    		else if($post_type == 'video'){
-	    			echo "<option value='music'>Music</option>"; 
+	    			echo "<option value='audio'>audio</option>"; 
 	    			echo "<option value='image'>Image</option>"; 
 	    			echo "<option value='thread'>thread</option>"; 
-	    			echo "<option value='movies'>Movies</option>"; 
+	    			echo "<option value='pdf'>PDF</option>"; 
 	    		}
 
 	    		else if($post_type == 'thread'){
-	    			echo "<option value='music'>Music</option>"; 
+	    			echo "<option value='audio'>audio</option>"; 
 	    			echo "<option value='image'>Image</option>"; 
 	    			echo "<option value='video'>Video</option>"; 
-	    			echo "<option value='movies'>Movies</option>"; 
+	    			echo "<option value='pdf'>PDF</option>"; 
 	    		}
-	    		else if($post_type == 'movies'){
-	    			echo "<option value='music'>Music</option>"; 
+	    		else if($post_type == 'pdf'){
+	    			echo "<option value='audio'>audio</option>"; 
 	    			echo "<option value='image'>Image</option>"; 
 	    			echo "<option value='video'>Video</option>"; 
 	    			echo "<option value='thread'>Thread</option>"; 
 	    		}
 	    		else{
-	    			echo "<option value='music'>Music</option>";
+	    			echo "<option value='audio'>audio</option>";
 	    			echo "<option value='video'>Video</option>"; 
 	    			echo "<option value='image'>Image</option>";
-	    			echo "<option value='movies'>Movies</option>";
+	    			echo "<option value='pdf'>PDF</option>";
 	    		}
 
 	    	?>
@@ -271,16 +276,16 @@
 
 
 
-    <h1>Music</h1>
+    <h1>audio</h1>
      <div class="form-group">
-     	<label for="post_music">Post Music</label>
-        <input  type="file" name="music">
+     	<label for="post_audio">Post audio</label>
+        <input  type="file" name="audio">
      </div>
 
      <div class="form-group">
-     	<label for="post_music_thumbnail">Post Music Thumbnail</label>
-     	<img width="100" src="../music/music_thumbnail/<?php echo $post_music_thumbnail; ?>" alt="">
-        <input  type="file" name="music_thumbnail">
+     	<label for="post_audio_thumbnail">Post audio Thumbnail</label>
+     	<img width="100" src="../audio/audio_thumbnail/<?php echo $post_audio_thumbnail; ?>" alt="">
+        <input  type="file" name="audio_thumbnail">
      </div>
 
 
@@ -301,14 +306,14 @@
      <!-- Movies -->
       <h1>Movies</h1>
       <div class="form-group">
-      	<label for="post_movies">Post Movies</label>
-        <input  type="file" name="movies">
+      	<label for="post_pdf">Post PDF</label>
+        <input  type="file" name="pdf">
      </div>
 
      <div class="form-group">
-      	<label for="post_movies_thumbnail">Post Movies Thumbnail</label>
-		<img width="100" src="../movies/movies_thumbnail/<?php echo $post_movies_thumbnail; ?>" alt="">
-        <input  type="file" name="movies_thumbnail">
+      	<label for="post_pdf_thumbnail">Post PDF Thumbnail</label>
+		<img width="100" src="../pdf/pdf_thumbnail/<?php echo $post_pdf_thumbnail; ?>" alt="">
+        <input  type="file" name="pdf_thumbnail">
      </div>
 
 

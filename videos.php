@@ -1,10 +1,10 @@
-<!--  POWERFUL NOTE IN INDEX........The htaccess file only work on index page...The video, savage and music page...needs you
+<!--  POWERFUL NOTE IN INDEX........The htaccess file only work on index page...The video, savage and audio page...needs you
 to add .php to the files when reffering them because it goes to the directory if not, which is stupid -->
 
 
     <!--================Header Menu Area =================-->
     <?php include_once("includes/header.php"); ?>
-    <!--================Header Menu Area =================-->
+    <!--================Header Menu Area =================-->   
 
     
 
@@ -24,10 +24,25 @@ to add .php to the files when reffering them because it goes to the directory if
 
 
     <!-- Searchbar ended its div well -->
+
+
+    <!--================Navigation Area=================-->
+    <?php include("includes/levels.php"); ?>
+    <!--================Navigation Area=================-->
+
+
+
             <!-- Blog Entries Column -->
             <div class="col-md-7">
+
             
             <hr>
+            <div class="segment-top">
+                
+                <h2 style="color: gray !important; padding-top: 30px; text-align: center; ">POSTS</h2>
+                <p></p>
+            </div>
+
             <?php 
              if(isset($_GET['page'])){
                     $page = $_GET['page'];
@@ -38,25 +53,12 @@ to add .php to the files when reffering them because it goes to the directory if
 
                 if($page == "" || $page == 1){
                     $page_1 = 0;
-                }else{
+                }
+                else{
                     $page_1 = ($page * 15) - 15;
                 }
                 $next = $page + 1;
                 $previous = $page - 1;
-
-            ?>
-
-            <?php
-            // if(isset($_GET['index_id'])){
-            //     $the_index_id = $_GET['index_id'];
-
-            //     $index_view_query = "UPDATE posts SET index_views_count = index_views_count + 1 WHERE index_id = {$the_index_id}";
-            //     $send_index_view_query = mysqli_query($connection, $index_view_query);
-
-
-            //     if(!$send_index_view_query){
-            //         die("QUERY FAILED " . mysqli_error($connection));
-            //     }
 
             ?>
 
@@ -85,11 +87,11 @@ to add .php to the files when reffering them because it goes to the directory if
                     
                     $post_image_thread1 = $row['thread1'];
 
-                    $post_music = $row['post_music'];
+                    $post_audio = $row['post_audio'];
                     $post_video = $row['post_video'];
-                    $post_music_thumbnail = $row['post_music_thumbnail'];
+                    $post_audio_thumbnail = $row['post_audio_thumbnail'];
                     $post_video_thumbnail = $row['post_video_thumbnail'];
-                    $post_movies_thumbnail = $row['post_movies_thumbnail'];
+                    $post_pdf_thumbnail = $row['post_pdf_thumbnail'];
                     $post_content = substr($row['post_content'], 0,100);
                     $post_tags = $row['post_tags'];
                     $post_status = $row['post_status'];
@@ -100,7 +102,7 @@ to add .php to the files when reffering them because it goes to the directory if
 
                  <!-- First Blog Post -->
                  <?php
-                    
+
                     if($post_type === 'video'){
                         echo "<div class='segment-title-video'>
                         <a href='post?p_id=$post_id'><h2><span class='fa fa-play'></span> $post_title </h2></a>
@@ -122,12 +124,14 @@ to add .php to the files when reffering them because it goes to the directory if
 
                     }
 
+
+
                     else
                     {
                         continue;
                     }
 
-                    
+
 
                  ?>
 
@@ -156,12 +160,9 @@ to add .php to the files when reffering them because it goes to the directory if
                 </div>
                 <!-- Container -->
 
-            <div class="well" style="color: white !important; font-family: 'Times New Romans'; background-color: #f0ad4e; text-transform: uppercase;">
-            <h2 style="color: black;"><a style='color: white; font-size: 19px;' href="https://wa.me/2348154673170?text=Welcome%20to%20Krazy%20World%20Ent.%20TV.%20Please%20do%20save%20this%20number.%20Your%20name%20is">Click on the Whatsapp Icon to Join one of the biggest Whatsapp TV - Krazy World Ent.<img src="images/categories/Whatsapp.png" style="width: 30px; height: 30px;" alt="Whatsapp Image"></a></h2>
-            </div>
 
                 <!-- Hotposts Area -->
-                <?php include("hotposts.php"); ?>
+                <?php // include("hotposts.php"); ?>
                 <!-- Hotposts Area -->
 
 
@@ -170,8 +171,6 @@ to add .php to the files when reffering them because it goes to the directory if
             <!-- Row -->
 
 
-
-
             <!--================Footer Area =================-->
             <?php include("includes/footer.php"); ?>
-            <!--================Footer Area =================
+            <!--================Footer Area =================->
