@@ -4,10 +4,10 @@ $select_all_categories = mysqli_query($connection, $query);
 ?>
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-5">
-                <hr>
+            
                 <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Related</h4>
+                <div class="well wow animate__animated animate__zoomIn delay-1">
+                <h2 style="color: gray !important; text-align: center; ">CATEGORIES</h2>
                     <div class="row">
                         <div class="col-lg-12">
                             <ul class="list-unstyled">
@@ -21,7 +21,7 @@ $select_all_categories = mysqli_query($connection, $query);
                                     }
                                     else{
                                         echo "<div class='chip'>
-                                        <img src='images/categories/favicon.png' alt='img';><a href='category?category={$cat_id}' style='color: #4D5DAD;'>{$cat_title}</a>
+                                       <a href='category?category={$cat_id}' style='color: black; font-size:19px;'>{$cat_title}</a>
                                         </div>"; 
                                         }
                                     }

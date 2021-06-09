@@ -27,66 +27,6 @@
 }
 
 
-
-/*
-.btn-next:focus,
-.btn-next.focus {
-  color: #fff;
-  background-color: #ec971f;
-  border-color: #985f0d;
-}
-.btn-next:hover {
-  color: #fff;
-  background-color: #ec971f;
-  border-color: #d58512;
-}
-.btn-next:active,
-.btn-next.active,
-.open > .dropdown-toggle.btn-next {
-  color: #fff;
-  background-color: #ec971f;
-  border-color: #d58512;
-}
-.btn-next:active:hover,
-.btn-next.active:hover,
-.open > .dropdown-toggle.btn-next:hover,
-.btn-next:active:focus,
-.btn-next.active:focus,
-.open > .dropdown-toggle.btn-next:focus,
-.btn-next:active.focus,
-.btn-next.active.focus,
-.open > .dropdown-toggle.btn-next.focus {
-  color: #fff;
-  background-color: #d58512;
-  border-color: #985f0d;
-}
-.btn-next:active,
-.btn-next.active,
-.open > .dropdown-toggle.btn-next {
-  background-image: none;
-}
-.btn-next.disabled:hover,
-.btn-next[disabled]:hover,
-fieldset[disabled] .btn-next:hover,
-.btn-next.disabled:focus,
-.btn-next[disabled]:focus,
-fieldset[disabled] .btn-next:focus,
-.btn-next.disabled.focus,
-.btn-next[disabled].focus,
-fieldset[disabled] .btn-next.focus {
-  background-color: #f0ad4e;
-  border-color: #eea236;
-}
-.btn-next .badge {
-  color: #f0ad4e;
-  background-color: #fff;
-}
-*/
-
-
-
-
-
 p{
   color: black;
   line-height: 25px;
@@ -187,7 +127,7 @@ h2{
     font-size: 17px;
     text-align: center;
     background: black;
-    line-height: 75px;
+    line-height: 30px;
 }
 /*responsive css*/
 @media only screen and (min-width: 768px) and (max-width: 991px){

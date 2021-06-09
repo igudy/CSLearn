@@ -26,7 +26,7 @@
                                 <i class="fa fa-dashboard"></i>  <a href="index">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> Blank Page
+                                <i class="fa fa-file"></i> Posts | Categories | Profile | Admin
                             </li>
                         </ol>
                     </div>
@@ -108,39 +108,6 @@
         </div>
     </div>
 
-
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-yellow">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-user fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-
-
-                    <?php
-                        $query = "SELECT * FROM top";
-                        $select_all_top_query = mysqli_query($connection, $query);
-                        $top_count = mysqli_num_rows($select_all_top_query);
-
-                    ?>
-                     <div class='huge'><?php echo $top_count; ?></div>
-
-
-                        <div>Top</div>
-                    </div>
-                </div>
-            </div>
-            <a href="top.php">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
     <div class="col-lg-3 col-md-6">
         <div class="panel panel-green">
             <div class="panel-heading">
@@ -194,7 +161,7 @@
                      <div class='huge'><?php echo $users_count; ?></div>
 
 
-                        <div> Users</div>
+                        <div> Admin </div>
                     </div>
                 </div>
             </div>

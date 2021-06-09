@@ -39,7 +39,7 @@ to add .php to the files when reffering them because it goes to the directory if
             <hr>
             <div class="segment-top">
                 
-                <h2 style="color: gray !important; padding-top: 30px; text-align: center; ">POSTS</h2>
+                <h2 style="color: gray !important; padding-top: 30px; text-align: center; ">VIDEOS</h2>
                 <p></p>
             </div>
 
@@ -102,8 +102,8 @@ to add .php to the files when reffering them because it goes to the directory if
 
                  <!-- First Blog Post -->
                  <?php
-
-                    if($post_type === 'video'){
+                if($post_type === 'video')
+                    {
                         echo "<div class='segment-title-video'>
                         <a href='post?p_id=$post_id'><h2><span class='fa fa-play'></span> $post_title </h2></a>
                         </div>
@@ -114,16 +114,15 @@ to add .php to the files when reffering them because it goes to the directory if
 
                     <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
 
+                        <div class='user'>
+                        <p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>
+                        </div>
+
                     </div>
-                    <br>
                     <hr>
 
                     ";
-
-
-
                     }
-
 
 
                     else
@@ -143,10 +142,6 @@ to add .php to the files when reffering them because it goes to the directory if
                     <div style="border-color: green; position: fixed; bottom: 100px; right: 1%; bottom: 1%; z-index: 1;"><a href="https://wa.me/2348154673170?text=Welcome%20to%20Krazy%20World%20Ent.%20TV.%20Please%20do%20save%20this%20number.%20Your%20name%20is"><img  src="images/categories/Whatsapp.png" style="width: 60px; height: 60px;" alt="Whatsapp Image"></a></div>
 
 
-            <!--================Categories Area =================-->
-            <?php include("includes/video_pagination.php"); ?>
-            <!--================Categories Area =================-->
-
             </div>
             <!-- End of col-md-7 -->
 
@@ -164,7 +159,6 @@ to add .php to the files when reffering them because it goes to the directory if
                 <!-- Hotposts Area -->
                 <?php // include("hotposts.php"); ?>
                 <!-- Hotposts Area -->
-
 
 
             </div>

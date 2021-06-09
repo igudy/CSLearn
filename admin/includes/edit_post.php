@@ -21,13 +21,9 @@
             $post_image_thread2 = $row['thread2'];
             $post_image_thread3 = $row['thread3'];
 
-
 			$post_video_thumbnail 		= $row['post_video_thumbnail'];
 			$post_audio 				= $row['post_audio'];
 			$post_audio_thumbnail 		= $row['post_audio_thumbnail'];
-
-			// $post_movies 				= $row['post_movies'];
-			// $post_movies_thumbnail 		= $row['post_movies_thumbnail'];
 
 			$post_content 				= $row['post_content'];
 			$post_date 					= $row['post_date'];
@@ -104,7 +100,7 @@
         move_uploaded_file($post_audio_thumbnail_temp, "../audio/audio_thumbnail/$post_audio_thumbnail"); 
         move_uploaded_file($post_pdf_thumbnail_temp, "../pdf/pdf_thumbnail/$post_pdf_thumbnail"); 
         
-        if(empty($post_image) || || empty($post_pdf_thumbnail) empty($post_image_thread1)  || empty($post_image_thread2) || empty($post_image_thread3) || empty($post_video_thumbnail) || empty($post_audio_thumbnail)) {
+        if(empty($post_image) || empty($post_pdf_thumbnail) || empty($post_image_thread1)  || empty($post_image_thread2) || empty($post_image_thread3) || empty($post_video_thumbnail) || empty($post_audio_thumbnail)) {
         
         $query = "SELECT * FROM posts WHERE post_id = $the_post_id ";
         $select_image = mysqli_query($connection, $query);
@@ -120,7 +116,6 @@
            // audio and video
            	$post_video_thumbnail 		= $row['post_video_thumbnail'];
            	$post_pdf_thumbnail 		= $row['post_pdf_thumbnail'];
-           	// $post_movies_thumbnail 		= $row['post_movies_thumbnail'];
 			$post_audio_thumbnail 		= $row['post_audio_thumbnail'];
         	}
 		}
@@ -207,36 +202,36 @@
 	    	<option value="<?php echo $post_type; ?>"><?php echo $post_type; ?></option>
 	    	<?php
 	    		if($post_type == 'image'){
-	    			echo "<option value='video'>Video</option>";
+	    			echo "<option value='video'>video</option>";
 	    			echo "<option value='audio'>audio</option>";
-	    			echo "<option value='thread'>Thread</option>";
-	    			echo "<option value='pdf'>PDF</option>";
+	    			echo "<option value='thread'>thread</option>";
+	    			echo "<option value='pdf'>pdf</option>";
 
 	    		}
 	    		else if($post_type == 'video'){
 	    			echo "<option value='audio'>audio</option>"; 
-	    			echo "<option value='image'>Image</option>"; 
+	    			echo "<option value='image'>image</option>"; 
 	    			echo "<option value='thread'>thread</option>"; 
-	    			echo "<option value='pdf'>PDF</option>"; 
+	    			echo "<option value='pdf'>pdf</option>"; 
 	    		}
 
 	    		else if($post_type == 'thread'){
 	    			echo "<option value='audio'>audio</option>"; 
-	    			echo "<option value='image'>Image</option>"; 
-	    			echo "<option value='video'>Video</option>"; 
-	    			echo "<option value='pdf'>PDF</option>"; 
+	    			echo "<option value='image'>image</option>"; 
+	    			echo "<option value='video'>video</option>"; 
+	    			echo "<option value='pdf'>pdf</option>"; 
 	    		}
 	    		else if($post_type == 'pdf'){
 	    			echo "<option value='audio'>audio</option>"; 
-	    			echo "<option value='image'>Image</option>"; 
-	    			echo "<option value='video'>Video</option>"; 
-	    			echo "<option value='thread'>Thread</option>"; 
+	    			echo "<option value='image'>image</option>"; 
+	    			echo "<option value='video'>video</option>"; 
+	    			echo "<option value='thread'>thread</option>"; 
 	    		}
 	    		else{
 	    			echo "<option value='audio'>audio</option>";
-	    			echo "<option value='video'>Video</option>"; 
-	    			echo "<option value='image'>Image</option>";
-	    			echo "<option value='pdf'>PDF</option>";
+	    			echo "<option value='video'>video</option>"; 
+	    			echo "<option value='image'>image</option>";
+	    			echo "<option value='pdf'>pdf</option>";
 	    		}
 
 	    	?>

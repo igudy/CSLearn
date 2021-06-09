@@ -22,7 +22,7 @@ a:hover{
   width: 80px;
   float: left;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   margin-right: 5px;
   margin-top: 5px;
 }
@@ -50,13 +50,15 @@ a:hover{
 /*Contact Chip*/
 .chip {
     font-family: New Times Romans;
+    display: inline-block;
+    font-size: 19px;
+    margin-right: 10px;
     margin-bottom: 10px;
-    padding: 0px 1px;
-    height: 15px;
-    font-size: 15px;
-    line-height: 30px;
-    border-radius: 15px;
-    background-color: #f1f1f1;
+    padding: 0 10px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    background-color: #e6e9f0;
 }
 
 
@@ -67,6 +69,18 @@ a:hover{
     border-radius: 80%;
 }
 
+
+
+/*User Chip*/
+.user {
+    font-family: monospace;
+    color: grey;
+    margin-top: 3px;
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: none;
+}
 
 /*For img-thumbnail*/
 /*This is for the thumbnail for the index page and the content page*/
@@ -355,7 +369,7 @@ h2{
     font-family: 'Times New Romans';
     font-size: 15px;
     color: white !important;
-    background-color: #4D5DAD !important;
+    background-color: #431C5D !important;
     float: left;
     padding: 8px 16px;
     text-decoration: none;

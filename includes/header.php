@@ -39,6 +39,7 @@
         <link href="css/about.css" rel="stylesheet">
         <link href="css/krazy.css" rel="stylesheet">
         <link href="css/cslearnstyle.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
 
 
 <!--     <link href="css/blog-home.css" rel="stylesheet">

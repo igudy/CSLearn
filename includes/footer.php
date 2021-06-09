@@ -9,7 +9,9 @@ $body = escape($_POST['e_body']);
 $headers = "From: " . escape($_POST['e_email']) .  " Name: " . escape($_POST['e_name']) . "\r\n";
 
 
+
 mail($to, $subject, $body, $headers);
+
 
 }
 ?>
@@ -73,6 +75,12 @@ mail($to, $subject, $body, $headers);
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+
+<script src="js/wow.js"></script>
+<script>
+    new WOW().init();
+</script>
+
 
 <!-- Bootstrap Core JavaScript -->
 

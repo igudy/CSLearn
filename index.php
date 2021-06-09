@@ -26,9 +26,9 @@ to add .php to the files when reffering them because it goes to the directory if
     <!-- Searchbar ended its div well -->
 
 
-    <!--================Navigation Area=================-->
+    <!--================Levels Area=================-->
     <?php include("includes/levels.php"); ?>
-    <!--================Navigation Area=================-->
+    <!--=================Levels Area=================-->
 
 
 
@@ -40,10 +40,43 @@ to add .php to the files when reffering them because it goes to the directory if
             <div class="segment-top">
                 
                 <h2 style="color: gray !important; padding-top: 30px; text-align: center; ">POSTS</h2>
-                <p></p>
+                
             </div>
 
-            <?php 
+<!--             <div class="wow animate__animated animate__zoomIn">
+                <h1>CONTENT TO REVEAL HERE</h1>
+            </div> -->
+
+<!-- 
+            <div class="col-md-4 fadeinleft">
+                <a href="#">
+                    <div class="box-border-wht">
+                            <p>Title 1</p>
+                            <img src="images/CAMPUSBUY.png">
+                    </div>
+                </a>
+            </div>
+ 
+            <div class="col-md-4 fadeinleft delay-1">
+                <a href="#">
+                    <div class="box-border-wht">
+                            <p>Title 2</p>
+                            <img src="/images/image2.jpg">
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 fadeinleft delay-2">
+                <a href="#">
+                    <div class="box-border-wht">
+                            <p>Title 3</p>
+                            <img src="/images/image3.jpg">
+                    </div>
+                </a>
+            </div> -->
+
+            
+           <?php 
              if(isset($_GET['page'])){
                     $page = $_GET['page'];
 
@@ -105,38 +138,49 @@ to add .php to the files when reffering them because it goes to the directory if
 
                     if($post_type === 'audio')
                     {
-                        echo "<div class='segment-title-audio'>
-                        <a href='post?p_id=$post_id'><h2><span class='fa fa-audio'></span> $post_title  </h2></a>
+                        echo "<div class='segment-title-video'>
+                        <a href='post?p_id=$post_id'><h2><span class='fa fa-file-audio-o'></span>$post_title</h2></a>
                         </div>
 
-
-                        
                         <div style='margin-top: -50px;'>
                             <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='audio/audio_thumbnail/$post_audio_thumbnail' alt='img';></a><span class='content'>$post_content</span>
 
                         <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
+
+                        <div class='user'>
+                        <p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>
                         </div>
-                        <br>
+
+
+
+                        </div>
                         <hr>
-
                         ";
-
                     }
 
-                    else if($post_type === 'thread'){
+                    else if($post_type === 'thread')
+                    {
                         echo "<div class='segment-title-thread'>
                         <a href='post?p_id=$post_id'><h2><span class='fas fa-images'></span> $post_title  </h2></a>
                         </div>
 
                         <a href='post?p_id=$post_id'><img class='img-responsive-image img-thumbnail' src='images/threads/$post_image_thread1' alt=''></a><br><span class='content'>$post_content</span>
 
-                    <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a> 
+                    <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
+
+                        <div class='user'>
+                        <p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>
+                        </div>
+
+
+                        </div>
                     <hr>
                     ";
                     
                     }
 
-                    else if($post_type === 'video'){
+                    else if($post_type === 'video')
+                    {
                         echo "<div class='segment-title-video'>
                         <a href='post?p_id=$post_id'><h2><span class='fa fa-play'></span> $post_title </h2></a>
                         </div>
@@ -147,19 +191,19 @@ to add .php to the files when reffering them because it goes to the directory if
 
                     <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
 
+                        <div class='user'>
+                        <p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>
+                        </div>
+
                     </div>
-                    <br>
                     <hr>
 
                     ";
-
-
-
                     }
 
                     else if($post_type === 'pdf'){
                         echo "<div class='segment-title-video'>
-                        <a href='post?p_id=$post_id'><h2><span class='fa fa-play'></span> $post_title </h2></a>
+                        <a href='post?p_id=$post_id'><h2><span class='fa fa-file'></span> $post_title </h2></a>
                         </div>
 
                         <div style='margin-top: -50px;'>
@@ -168,14 +212,14 @@ to add .php to the files when reffering them because it goes to the directory if
 
                     <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
 
+                        <div class='user'>
+                        <p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>
+                        </div>
+
+
                     </div>
-                    <br>
                     <hr>
-
                     ";
-
-
-
                     }
 
 
@@ -189,6 +233,13 @@ to add .php to the files when reffering them because it goes to the directory if
 
 
                         <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
+                        
+
+                        <div class='user'>
+                        <p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>
+                        </div>
+
+
                         <hr>
 
                         ";
@@ -233,7 +284,6 @@ to add .php to the files when reffering them because it goes to the directory if
                 <!-- Hotposts Area -->
                 <?php // include("hotposts.php"); ?>
                 <!-- Hotposts Area -->
-
 
 
             </div>

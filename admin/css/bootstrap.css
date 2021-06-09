@@ -3119,9 +3119,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-success:active,
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
-  color: #fff;
-  background-color: #449d44;
-  border-color: #398439;
+  color: grey !important;
+  background-color: grey !important;
+  border-color: grey !important;
 }
 .btn-success:active,
 .btn-success.active,
@@ -3146,7 +3146,7 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #5cb85c;
+  background-color: grey !important;
   border-color: #4cae4c;
 }
 .btn-success .badge {

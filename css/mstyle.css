@@ -59,6 +59,7 @@ banner
 .block
 {
 	display: block;
+	
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
     color: #fff;
@@ -72,6 +73,7 @@ banner
 	font-size: 14px;
 	font-weight: 300;
 }
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
 {
 	color: #fff;
@@ -89,7 +91,7 @@ banner
 #banner{
 	background: url('1.png') no-repeat fixed;
 	background-size: cover;
-	min-height: 100px;
+	min-height: 200px;
 	position: relative;
 }
 @media (max-width: 2000px){
@@ -103,8 +105,9 @@ banner
 }
 
 /*This control how large the banner is ---- Take note of this!!!!!!!!!!!!!!!!!!!!!!!*/
+
 .banner-info{
-	padding-top: 100px;
+	padding-top: 150px;
 }
 .banner-logo img{
 	display: inline-block;

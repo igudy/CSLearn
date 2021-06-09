@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index">MadWorld</a>
+                <a class="navbar-brand" href="../index">CS LEARN</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -62,27 +62,11 @@
                             </li>
 
 
-                            <li>
-                                <a href="hotposts">Hotposts</a>
-                            </li>
-
-                            <li>
-                                <a href="hotposts?source=add_hotposts">Add Hotposts</a>
-                            </li>
 
                         </ul>
                     </li>
-                     <li>
-                    <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-arrows-v"></i>Top<i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo2" class="collapse">
-                            <li>
-                                <a href="top">View All Top</a>
-                            </li>
-                            <li>
-                                <a href="top?source=add_top">Add Top</a>
-                            </li>
-                        </ul>
-                    </li>
+
+                    
                     <li>
                         <a href="categories"><i class="fa fa-fw fa-bar-chart-o"></i>Categories</a>
                     </li>
@@ -91,13 +75,13 @@
                     </li>
 
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i>Admin<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo1" class="collapse">
                             <li>
-                                <a href="users">View All Users</a>
+                                <a href="users">View All Admin</a>
                             </li>
                             <li>
-                                <a href="users?source=add_user">Add User</a>
+                                <a href="users?source=add_user">Add Admin</a>
                             </li>
                         </ul>
                     </li>

@@ -25,7 +25,6 @@
 
         $error['username'] = 'Username needs to be longer';
 
-
     }
 
      if($username ==''){
@@ -139,7 +138,6 @@
 
 
         <hr>
-
 
 
 <?php include "includes/footer.php";?>

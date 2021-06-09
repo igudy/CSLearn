@@ -56,7 +56,7 @@
 
                     $post_type          = $row['post_type'];
                     $post_audio         = $row['post_audio'];
-                    $post_pdf        = $row['post_pdf'];
+                    $post_pdf           = $row['post_pdf'];
                     $post_audio_thumbnail = $row['post_audio_thumbnail'];
                     $post_pdf_thumbnail = $row['post_pdf_thumbnail'];
                     $post_video         = $row['post_video'];
@@ -71,13 +71,13 @@
 
                 <?php
 
-                    if ($post_type == 'music') {
-                    echo "<div class='segment-title-music'>
-                        <a href='post.php?p_id=$post_id'><h2><span class='fa fa-music'></span> $post_title  </h2></a>
+                    if ($post_type == 'audio') {
+                    echo "<div class='segment-title-video'>
+                        <a href='post.php?p_id=$post_id'><h2><span class='fa fa-file-audio-o'></span> $post_title  </h2></a>
                         </div>";
 
                         echo "
-                        <div style='margin: 60px;'></div><img class='img-responsive-image img-thumbnail'  src='music/music_thumbnail/$post_audio_thumbnail' alt=''>
+                        <div style='margin: 60px;'></div><img class='img-responsive-image img-thumbnail'  src='audio/audio_thumbnail/$post_audio_thumbnail' alt=''>
 
                         <hr>";
 
@@ -93,16 +93,16 @@
                             <span style='font-size: 13px;'>$post_content</span>
                                 
                                 <div style='margin: 10px 10px 0px 0px;'></div>
-                                    <p><i class='fa fa-clock-o'> $post_date</i></p>
+                        <p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>
                                 ";
 
-                    echo "<p><a href='$post_audio' class='download' download='$post_audio' alt='' ><span class='fa fa-download small'>Download Music</a></span>";
+                    echo "<p><a href='$post_audio' class='download' download='$post_audio' alt='' ><span class='fa fa-download small'>Download Audio</a></span>";
 
 
 
                     }
                     else if($post_type === 'thread'){
-                        echo "<div class='segment-title-thread'>
+                        echo "<div class='segment-title-video'>
                         <a href='post?p_id=$post_id'><h2><span class='fas fa-images'></span> $post_title  </h2></a>
                         </div>";
 
@@ -139,7 +139,7 @@
                     // PDF
                     else if ($post_type == 'pdf') {
                     echo "<div class='segment-title-video'>
-                        <a href='post.php?p_id=$post_id'><h2><span class='fa fa-play'></span> $post_title  </h2></a>
+                        <a href='post.php?p_id=$post_id'><h2><span class='fa fa-file'></span> $post_title  </h2></a>
                         </div>";
 
                         echo "
@@ -150,12 +150,13 @@
 
                     echo "<div style='margin: 0px 30px 0px 0px;'></div>
                             <span style='font-size: 13px;'>$post_content</span>
-                                
-                                <div style='margin: 10px 10px 0px 0px;'></div>
-                                    <p><i class='fa fa-clock-o'> $post_date</i></p>
+
                         ";
 
-                    echo "<p><a href='$post_pdf' class='download' download='$post_pdf' alt='' ><span class='fa fa-download small'>Download Movie</a></span>";
+                    echo "<p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>";
+
+                    echo "<p><a href='$post_pdf' class='download' download='$post_pdf' alt='' ><span class='fa fa-download small'>Download Pdf</a></span>";
+;
 
                     }
 
@@ -172,22 +173,22 @@
 
                     echo "<div style='margin: 0px 30px 0px 0px;'></div>
                             <span style='font-size: 13px;'>$post_content</span>
-                                
-                                <div style='margin: 10px 10px 0px 0px;'></div>
-                                    <p><i class='fa fa-clock-o'> $post_date</i></p>
                         ";
 
-                    echo "<p><a href='$post_video' class='download' download='$post_video' alt='' ><span class='fa fa-download small'>Download Video</a></span>";
+                    echo "<p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>";
+
+                   echo "<p><a href='$post_video' class='download' download='$post_video' alt='' ><span class='fa fa-download small'>Download Video</a></span>";
+;
                     }
 
 
                     else{
-                    echo "<div class='segment-title'>
+                    echo "<div class='segment-title-video'>
                     <a href='post.php?p_id=$post_id'><h2><span class='fa fa-image'></span> $post_title </h2></a>
                     </div>";
 
                     echo "
-                    <div style='margin: 60px;'></div><img class='img-responsive-image img-thumbnail' src='images/$post_image' alt=''><";
+                    <div style='margin: 60px;'></div><img class='img-responsive-image img-thumbnail' src='images/$post_image' alt=''>";
                     
 
                     echo "<div style='margin: 0px 30px 0px 0px;'></div>
@@ -198,7 +199,7 @@
                         ";
 
 
-                    echo "<p><a href='images/$post_image' class='download' download='images/$post_image' alt='' ><span class='fa fa-download small'>Download</a></span>";
+                    echo "<p style ='color: grey'><span class='fa fa-user-circle-o'></span><span style='margin: 4px;'>$post_user <span class='fa fa-clock-o' style='margin: 4px;'></span>$post_date</span></p>";
 
 
                     }
@@ -237,17 +238,6 @@
                 die('QUERY FAILED' . mysqli_error($connection));
             }
 
-
-            // $query = "INSERT INTO comments (comment_post_id, comment_author, comment_email, comment_content, comment_status,comment_date)";
-
-            // $query .= "VALUES ($the_post_id ,'{$comment_author}', '{$comment_email}', '{$comment_content }', 'approved', now())";
-
-            // $create_comment_query = mysqli_query($connection, $query);
-
-            // if (!$create_comment_query) {
-            //     die('QUERY FAILED' . mysqli_error($connection));
-            // }
-
         }
     }
 
@@ -270,7 +260,7 @@
 
                         <textarea class="form-control" id="text" cols="30" name="comment_content" rows="5"></textarea><hr>
                 </div>
-                        <input type="submit" name="create_comment" id="btn-login" class="btn btn-success btn-lg btn-block" value="Submit">
+                        <input type="submit" name="create_comment" id="btn-login" class="btn btn-lg btn-block btn-success" value="Submit">
                     </form>
                 </div>
 

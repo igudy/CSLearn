@@ -1,5 +1,5 @@
 <!-- Blog Search Well -->
-    <div class="well">
+    <div class="well wow animate__animated animate__zoomIn">
 
             <div class="btn-group" style="width:100%">
                 <a class="secondNavbar" href="index"><button style="width:33.3%; font-size: 16px; background-color: #1B041E;">Home</button></a>

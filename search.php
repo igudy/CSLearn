@@ -51,7 +51,6 @@
                     $post_video = $row['post_video'];
                     $post_audio_thumbnail = $row['post_audio_thumbnail'];
                     $post_video_thumbnail = $row['post_video_thumbnail'];
-                    $post_movies_thumbnail = $row['post_movies_thumbnail'];
                     $post_content = substr($row['post_content'], 0,100);
                     $post_tags = $row['post_tags'];
                     $post_status = $row['post_status'];

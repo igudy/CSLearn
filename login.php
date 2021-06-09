@@ -41,22 +41,6 @@
                 $previous = $page - 1;
 
             ?>
-
-            <?php
-            // if(isset($_GET['index_id'])){
-            //     $the_index_id = $_GET['index_id'];
-
-            //     $index_view_query = "UPDATE posts SET index_views_count = index_views_count + 1 WHERE index_id = {$the_index_id}";
-            //     $send_index_view_query = mysqli_query($connection, $index_view_query);
-
-
-            //     if(!$send_index_view_query){
-            //         die("QUERY FAILED " . mysqli_error($connection));
-            //     }
-
-            ?>
-
-           
                 <!-- Add space before read more -->
                 <div style="margin: 10px;"></div>
 
@@ -94,14 +78,6 @@
 
             </div>
 
-
-
-           
-
-
-            <!--================Categories Area =================-->
-            <?php include("includes/pagination.php"); ?>
-            <!--================Categories Area =================-->
 
             </div>
             <!-- End of col-md-7 -->

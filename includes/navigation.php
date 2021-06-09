@@ -65,8 +65,8 @@ else if ($pageName == $admin){
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
                 <li class="<?php echo $index_class; ?>"><a href="index">Home</a></li>
-                <li class="<?php echo $levels_class; ?>"><a href="#">Levels</a></li>
-                <li class="<?php echo $faqs_class; ?>"><a href="#">FAQs</a></li>
+                <li class="<?php echo $levels_class; ?>"><a href="levels">Levels</a></li>
+                <li class="<?php echo $faqs_class; ?>"><a href="faqs">FAQs</a></li>
                 <li class="<?php echo $about_class; ?>"><a href="about">About & Contact Us</a></li>
                 <li class="<?php echo $login_class; ?>"><a href="login">Login</a></li>
                 <li class="<?php echo $admin_class; ?>"><a href="admin">Admin</a></li>
