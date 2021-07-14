@@ -24,24 +24,17 @@ to add .php to the files when reffering them because it goes to the directory if
 
 
     <!-- Searchbar ended its div well -->
-
-
-    <!--================Navigation Area=================-->
-    <?php include("includes/levels.php"); ?>
-    <!--================Navigation Area=================-->
-
-
+                <div class="segment-top">
+                <h2 style="color: black; !important; padding-top: 30px; text-align: center; ">LEVEL POSTS</h2>
+              </div>
 
             <!-- Blog Entries Column -->
             <div class="col-md-7">
+              <div class="segment-top">
+            </div>
 
             
-            <hr>
-            <div class="segment-top">
-                
-                <h2 style="color: gray !important; padding-top: 30px; text-align: center; ">POSTS</h2>
-                <p></p>
-            </div>
+
 
             <?php 
              if(isset($_GET['page'])){
@@ -103,104 +96,102 @@ to add .php to the files when reffering them because it goes to the directory if
                  <!-- First Blog Post -->
                  <?php
 
-                    if($post_category_id === '36')
-                    {
-                             if($post_type === 'audio')
-                        {
-                            echo "<div class='segment-title-video'>
-                            <a href='post?p_id=$post_id'><h2><span class='fa fa-audio'></span>$post_title</h2></a>
-                            </div>
-
-                            <div style='margin-top: -50px;'>
-                                <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='audio/audio_thumbnail/$post_audio_thumbnail' alt='img';></a><span class='content'>$post_content</span>
-
-                            <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
-                            </div>
-                            <br>
-                            <hr>
-                            ";
-                        }
-
-                        else if($post_type === 'thread')
-                        {
-                            echo "<div class='segment-title-thread'>
-                            <a href='post?p_id=$post_id'><h2><span class='fas fa-images'></span> $post_title  </h2></a>
-                            </div>
-
-                            <a href='post?p_id=$post_id'><img class='img-responsive-image img-thumbnail' src='images/threads/$post_image_thread1' alt=''></a><br><span class='content'>$post_content</span>
-
-                        <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a> 
-                        <hr>
-                        ";
-                        
-                        }
-
-                        else if($post_type === 'video')
-                        {
-                            echo "<div class='segment-title-video'>
-                            <a href='post?p_id=$post_id'><h2><span class='fa fa-play'></span> $post_title </h2></a>
-                            </div>
-
-                            <div style='margin-top: -50px;'>
-                                <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='videos/videos_thumbnail/$post_video_thumbnail' alt='img';></a><span class='content'>$post_content</span>
-                            
-
-                        <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
-
-                        </div>
-                        <br>
-                        <hr>
-
-                        ";
-                        }
-
-                        else if($post_type === 'pdf'){
-                            echo "<div class='segment-title-video'>
-                            <a href='post?p_id=$post_id'><h2><span class='fa fa-play'></span> $post_title </h2></a>
-                            </div>
-
-                            <div style='margin-top: -50px;'>
-                                <a href='post?p_id=$post_id'><img class='video img-thumbnail' src='pdf/pdf_thumbnail/$post_pdf_thumbnail' alt='img';></a><span class='content'>$post_content</span>
-                            
-
-                        <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
-
-                        </div>
-                        <br>
-                        <hr>
-
-                        ";
 
 
-
-                        }
-
-
-
-                        else if($post_type === 'image'){
-                            echo "<div class='segment-title'>
-                            <a href='post?p_id=$post_id'><h2><span class='fa fa-image'></span> $post_title </h2></a>
-                            </div>
-
-                            <a href='post?p_id=$post_id'><img class='img-responsive-image img-thumbnail' src='images/$post_image' alt=''></a><br><span class='content'>$post_content</span>
-
-
-                            <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
-                            <hr>
-
-                            ";
-
-                        }
-
-                        else
-                        {
-                            continue;
-                        }
-                    }
 
                  ?>
 
                 <?php } }?>
+                <h2 style="color: gray;">100 Level Courses</h2>
+                  <table class="table table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>Term</th>
+                        <th>Code</th>
+                        <th>Title</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1st</td>
+                        <td>CHM111</td>
+                        <td>General Chemistry 1</td>
+                      </tr>
+                      <tr>
+                        <td>1st</td>
+                        <td>CSC110</td>
+                        <td>Introduction to Computing</td>
+                      </tr>
+                      <tr>
+                        <td>1st</td>
+                        <td>GST111</td>
+                        <td>Philosophy and Logic</td>
+                      </tr>
+                      <tr>
+                        <td>1st</td>
+                        <td>GST112</td>
+                        <td>Algebra and Trigonometry</td>
+                      </tr>
+                      <tr>
+                        <td>1st</td>
+                        <td>MTH110</td>
+                        <td>Calculus</td>
+                      </tr>
+                      <tr>
+                        <td>1st</td>
+                        <td>PHY109</td>
+                        <td>Practical Physics(1st and 2nd Semesters)</td>
+                      </tr>
+                     <tr>
+                        <td>1st</td>
+                        <td>PHY111</td>
+                        <td>Mech, Thermal Phy Properties Matter</td>
+                      </tr>    
+                    <tr>
+                        <td>2nd</td>
+                        <td>CHM112</td>
+                        <td>General Chemistry II</td>
+                      </tr>                     
+                      <tr>
+                        <td>2nd</td>
+                        <td>CSC120</td>
+                        <td>Introduction to Software Package</td>
+                      </tr>                     
+                      <tr>
+                        <td>2nd</td>
+                        <td>GST121</td>
+                        <td>Peace Conflict Studies and Conflicts Resolution</td>
+                      </tr>                     
+                      <tr>
+                        <td>2nd</td>
+                        <td>GST122</td>
+                        <td>Nigeria People and Culture</td>
+                      </tr>                     
+                      <tr>
+                        <td>2nd</td>
+                        <td>GST123</td>
+                        <td>History and Philosophy of Science and Technology</td>
+                      </tr>                     
+                      <tr>
+                        <td>2nd</td>
+                        <td>MTH123</td>
+                        <td>Vectors, Geometry and Statistics</td>
+                      </tr>                     
+                      <tr>
+                        <td>2nd</td>
+                        <td>MTH125</td>
+                        <td>Differential equation and Dynamics</td>
+                      </tr>                     
+                      <tr>
+                        <td>2nd</td>
+                        <td>PHY124</td>
+                        <td>Electromagnetism and Modern Physics</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- END OF 100 LEVEL COURSES -->
+
 
 
                 <!-- Whatsapp link -->
@@ -208,9 +199,6 @@ to add .php to the files when reffering them because it goes to the directory if
                     <div style="border-color: green; position: fixed; bottom: 100px; right: 1%; bottom: 1%; z-index: 1;"><a href="https://wa.me/2348154673170?text=Welcome%20to%20Krazy%20World%20Ent.%20TV.%20Please%20do%20save%20this%20number.%20Your%20name%20is"><img  src="images/categories/Whatsapp.png" style="width: 60px; height: 60px;" alt="Whatsapp Image"></a></div>
 
 
-            <!--================Categories Area =================-->
-            <?php include("includes/pagination.php"); ?>
-            <!--================Categories Area =================-->
 
             </div>
             <!-- End of col-md-7 -->

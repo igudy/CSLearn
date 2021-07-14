@@ -17,7 +17,7 @@
     <link rel="icon" href="images/categories/favicon.png" type="image/png">
 
 
-    <title>CSLearn : E-learning platform for computer science students</title>
+    <title>CSLearn : Web Based E-learning Platform for Computer Science Students</title>
     <!-- Bootstrap Core CSS -->
    
     <link href="css/bootstrap.min.css" rel="stylesheet">

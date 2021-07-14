@@ -124,9 +124,9 @@
                                 <div style='margin: 10px 10px 0px 0px;'></div>
                                     <p><i class='fa fa-clock-o'> $post_date</i></p>
                                 ";
-
-                    echo "
-
+ 
+                  echo "
+ 
                     <a href='images/threads/$post_image_thread1' class='download' download='images/threads/$post_image_thread1' alt='' ><span class='fa fa-download small'>Download 1</a></span>
 
                     <a href='images/threads/$post_image_thread2' class='download' download='images/threads/$post_image_thread2' alt='' ><span class='fa fa-download small'>Download 2</a></span>

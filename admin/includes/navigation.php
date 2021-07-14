@@ -35,8 +35,8 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="">Users Online: <span class="usersonline"></span></a></li>
-            <!-- <li><a href=''>Users Online: <?php //echo $_SESSION['users_online']; ?> </a></li> -->
+                <li><a href="">Admin Online: <span class="usersonline"></span></a></li>
+            <!-- <li><a href=''>Admin Online: <?php //echo $_SESSION['users_online']; ?> </a></li> -->
 
 
 

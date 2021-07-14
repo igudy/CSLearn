@@ -23,57 +23,11 @@ to add .php to the files when reffering them because it goes to the directory if
     <!--================Navigation Area=================-->
 
 
-    <!-- Searchbar ended its div well -->
-
-
-    <!--================Levels Area=================-->
-    <?php include("includes/levels.php"); ?>
-    <!--=================Levels Area=================-->
-
-
-
             <!-- Blog Entries Column -->
             <div class="col-md-7">
-
-            
-            <hr>
-            <div class="segment-top">
-                
+                <div class="segment-top">
                 <h2 style="color: gray !important; padding-top: 30px; text-align: center; ">POSTS</h2>
-                
             </div>
-
-<!--             <div class="wow animate__animated animate__zoomIn">
-                <h1>CONTENT TO REVEAL HERE</h1>
-            </div> -->
-
-<!-- 
-            <div class="col-md-4 fadeinleft">
-                <a href="#">
-                    <div class="box-border-wht">
-                            <p>Title 1</p>
-                            <img src="images/CAMPUSBUY.png">
-                    </div>
-                </a>
-            </div>
- 
-            <div class="col-md-4 fadeinleft delay-1">
-                <a href="#">
-                    <div class="box-border-wht">
-                            <p>Title 2</p>
-                            <img src="/images/image2.jpg">
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4 fadeinleft delay-2">
-                <a href="#">
-                    <div class="box-border-wht">
-                            <p>Title 3</p>
-                            <img src="/images/image3.jpg">
-                    </div>
-                </a>
-            </div> -->
 
             
            <?php 
@@ -119,6 +73,8 @@ to add .php to the files when reffering them because it goes to the directory if
                     $post_image = $row['post_image'];
                     
                     $post_image_thread1 = $row['thread1'];
+                    $post_image_thread2 = $row['thread2'];
+                    $post_image_thread3 = $row['thread3'];
 
                     $post_audio = $row['post_audio'];
                     $post_video = $row['post_video'];
@@ -164,7 +120,7 @@ to add .php to the files when reffering them because it goes to the directory if
                         <a href='post?p_id=$post_id'><h2><span class='fas fa-images'></span> $post_title  </h2></a>
                         </div>
 
-                        <a href='post?p_id=$post_id'><img class='img-responsive-image img-thumbnail' src='images/threads/$post_image_thread1' alt=''></a><br><span class='content'>$post_content</span>
+                        <a href='post?p_id=$post_id'><img class='img-responsive-image img-thumbnail' src='./images/threads/$post_image_thread1' alt=''></a><br><span class='content'>$post_content</span>
 
                     <a class='read_more' href='post?p_id=$post_id'>...Read More<span class='glyphicon glyphicon-chevron-right'></span></a>
 
@@ -279,12 +235,6 @@ to add .php to the files when reffering them because it goes to the directory if
 
                 </div>
                 <!-- Container -->
-
-
-                <!-- Hotposts Area -->
-                <?php // include("hotposts.php"); ?>
-                <!-- Hotposts Area -->
-
 
             </div>
             <!-- Row -->

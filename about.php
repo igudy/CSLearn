@@ -14,37 +14,21 @@
     <div class="container">
       <div class="row well">
         <h3 class="text-center" style="color: black;"><b>ABOUT US</b></h3>
-        <img src="images/about/csc.png" class="hotposts_others img-thumbnail" alt="csc" style=" width:500px; height: 400px;">
-
+        <img src="images/about/aboutt.png" class="hotposts_others img-thumbnail" alt="Krazyworldent" style=" width:400px; height: 400px;">
       <div style="margin-top: 20px;">
-          <i style="font-family: 'Times New Romans;' font-size: 15px;">The Department of computer science started on ....
-           You can follow the twitter account <span><a href="#"><i class="fa fa-twitter">@computer_science</i></a></span>.
-            Instagram <span><a href="#"><i class="fa fa-instagram">computer_science</i></a></span>
-            You can contact us on whatsapp <span><a href="#"><i class="fa fa-whatsapp">+234 - 000 -000 - 000</i></a></span><br><br>
+          <i style="font-family: 'Times New Romans;' font-size: 15px;">Computer Science is a department in the faculty of physical sciences, with the motto - NETWORKING THE WORLD. It was founded in the year 1997 and since then grew. The departmental office is located beside PTDF building and the class is located beside physical science 1000LT. 
+
+            <br>
+            Computer science is a 4 years course where 100 level recieve their classes in 1000LT, 200 level in 500LT, while 300 and 400 level in the departmental building.
+
+            <br> 
+            
           </div>
         </div>
       </div>
       <br>
 
 
-<!--       <div class="container">
-        <div class="row well">
-        <div class="card">
-          <img src="images/about/1.png" alt="igudy" style="width:100%"> -->
-        <!--     <h1>John Doe</h1> -->
-           <!--  <p class="title"><b> <br> Computer Scientist <br> CEO & Founder: <br> Krazy World Entertainment </b></p>
-            <div style="margin: 24px 0;">
-              <a href="instagram.com/iigudy"><i class="fa fa-instagram"></i></a>
-              <a href="twitter.com/iigudy"><i class="fa fa-twitter"></i></a>  
-              <a href="https://web.facebook.com/igunma.goodness?_rdc=1&_rdr"><i class="fa fa-facebook"></i></a> 
-          </div>
-        </div>
-
-        </div> -->
-        <!-- Row -->
-
-
-    <!-- </div> -->
     <!-- Container -->
 
 

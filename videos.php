@@ -25,13 +25,6 @@ to add .php to the files when reffering them because it goes to the directory if
 
     <!-- Searchbar ended its div well -->
 
-
-    <!--================Navigation Area=================-->
-    <?php include("includes/levels.php"); ?>
-    <!--================Navigation Area=================-->
-
-
-
             <!-- Blog Entries Column -->
             <div class="col-md-7">
 

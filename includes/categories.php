@@ -34,10 +34,40 @@ $select_all_categories = mysqli_query($connection, $query);
                     </div>
                     <!-- /.row -->
                 </div>
-            </div>
 
-                <!-- Side Widget Well -->
-               <!--  <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div> -->
+
+            <!-- ADD LEVELS HERE -->
+
+                <div class="col-md-12 col-xs-6 wow animate__animated animate__zoomIn delay-2">
+                    <div class="card">
+                      <a href="100level"><img src="./images/levels/100level.png" alt="Avatar" style="width:100%">
+                            <h4><b>View 100 Level Courses</b></h4></a>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-xs-6 wow animate__animated animate__zoomIn delay-2" alt="200level">
+                    <div class="card">
+                      <a href="200level.php"><img src="./images/levels/200level.png" alt="Avatar" style="width:100%">
+                            <h4><b>View 200 Level Courses</b></h4></a>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-xs-6 wow animate__animated animate__zoomIn delay-2">
+                    <div class="card">
+                      <a href="300level"><img src="./images/levels/300level.png" alt="Avatar" style="width:100%">
+                            <h4><b>View 300 Level Courses</b></h4></a>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-xs-6 wow animate__animated animate__zoomIn delay-2">
+                    <div class="card">
+                      <a href="400level"><img src="./images/levels/400level.png" alt="Avatar" style="width:100%">
+                            <h4><b>View 400 Level Courses</b></h4></a>
+                    </div>
+            </div>
+        </div>
+
+
+
+            <!-- END OF LEVELS -->
+

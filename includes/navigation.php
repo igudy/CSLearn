@@ -86,9 +86,6 @@ else if ($pageName == $admin){
               <h2>E-Learning For Computer Science Students</h2>
               <p style="color: white;"> Videos | Audio | FAQ's | News | PDF's</p>
             </div>
-            <!-- <div class="overlay-detail text-center">
-              <a href="#service"><i class="fa fa-angle-down"></i></a>
-            </div> -->
           </div>
         </div>
       </div>

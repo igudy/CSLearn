@@ -1,20 +1,47 @@
 <!-- Blog Search Well -->
-    <div class="well wow animate__animated animate__zoomIn">
+    <div class="wow animate__animated animate__zoomIn">
 
-            <div class="btn-group" style="width:100%">
-                <a class="secondNavbar" href="index"><button style="width:33.3%; font-size: 16px; background-color: #1B041E;">Home</button></a>
-                <a class="secondNavbar" href="videos.php"><button style="width:33.3%; font-size: 16px; background-color: #1B041E;">Videos</button></a>
-                <a class="secondNavbar" href="audios.php"><button style="width:33.3%; font-size: 16px; background-color: #1B041E;">Audios</button></a>
+
+        <section id="services">
+            <div class="row text-center">
+            <div class="col-md-2 col-xs-4 services">
+                <a href="index.php"><img src="images/services/home.png" class="services-img" style="width: 50px; height: 50px;">
+                <p class="small">Home</p></a>
             </div>
 
-            <div class="btn-group" style="width:100%">
-                <a class="secondNavbar" href="blog.php"><button style="width:33.3%; font-size: 16px; background-color: #1B041E;">Blog</button></a>
-                <a class="secondNavbar" href="pdf.php"><button style="width:33.3%; font-size: 16px; background-color: #1B041E;">PDF's</button></a>
-                <a class="secondNavbar" href="faqs.php"><button style="width:33.3%; font-size: 16px; background-color: #1B041E;">FAQ's</button></a>
+            <div class="col-md-2 col-xs-4 services">
+            <a href="videos.php"><img src="images/services/video.png" class="services-img" style="width: 50px; height: 50px;">
+                <p class="small">Videos</p></a>
             </div>
 
+            <div class="col-md-2 col-xs-4 services">
+            <a href="audios.php"><img src="images/services/music.png" class="services-img" style="width: 50px; height: 50px;">
+                <p class="small">Audios</p></a>
+            </div>
+
+
+            <div class="col-md-2 col-xs-4 services">
+            <a href="blog.php"><img src="images/services/blog.png" class="services-img" style="width: 50px; height: 50px;">
+                <p class="small">Blog</p></a>
+            </div>
+
+            <div class="col-md-2 col-xs-4 services">
+            <a href="pdf.php"><img src="images/services/pdf.png" class="services-img" style="width: 50px; height: 50px;">
+                <p class="small">PDF's</p></a>
+            </div>
+
+            <div class="col-md-2 col-xs-4 services">
+            <a href="faqs.php"><img src="images/services/faq.png" class="services-img" style="width: 50px; height: 50px;">
+                <p class="small">FAQ's</p></a>
+            </div>
+        </div>
+        </section>
+
+            
+
+     
         <form method="post" action="search.php">
-        <div class="input-group">
+        <div class="well input-group">
                     <input name="search" type="text" id="search" class="form-control">
 
             <span class="input-group-btn">
@@ -25,17 +52,6 @@
             </div>
         </form>
 
-
-<script>
-// $(function() {
-    //autocomplete
-    // $('#search').autocomplete({
-    //     source: "post_title.php"
-//     });            
-// });
-
-
-</script>
-
-        <!-- /.input-group -->
     </div>
+
+    <br>

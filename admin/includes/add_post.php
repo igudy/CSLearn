@@ -14,21 +14,6 @@ if(isset($_POST['create_post'])){
 
     //Update 1.1 Adding thread
     // Thread 1
-    $post_image_thread1_temp = $_FILES['thread1']['tmp_name'];
-    $post_image_thread1 = $_FILES['thread1']['name'];
-    move_uploaded_file($post_image_thread1_temp, "../images/threads/$post_image_thread1");
-
-
-    // Thread 2
-    $post_image_thread2_temp = $_FILES['thread2']['tmp_name'];
-    $post_image_thread2 = $_FILES['thread2']['name'];
-    move_uploaded_file($post_image_thread2_temp, "../images/threads/$post_image_thread2");
-
-
-    // Thread 3
-    $post_image_thread3_temp = $_FILES['thread3']['tmp_name'];
-    $post_image_thread3 = $_FILES['thread3']['name'];
-    move_uploaded_file($post_image_thread3_temp, "../images/threads/$post_image_thread3");
 
 
     // Videos - Tutorials

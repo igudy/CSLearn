@@ -38,6 +38,7 @@ mail($to, $subject, $body, $headers);
             <div class="col-md-6 col-sm-6 col-xs-12 segment-four segment-one md-mb-30 sm-mb-30">
                 <form role="form" action="" method="post" id="login-form" autocomplete="off"> 
                 <h2>Contact Us</h2>
+                
 
             <div class="form-group">
                 <label for="email" class="sr-only">Name</label>

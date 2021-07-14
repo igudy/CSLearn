@@ -271,7 +271,7 @@
 
 
 
-    <h1>audio</h1>
+    <h1>Audio</h1>
      <div class="form-group">
      	<label for="post_audio">Post audio</label>
         <input  type="file" name="audio">
@@ -298,8 +298,8 @@
      </div>
 
 
-     <!-- Movies -->
-      <h1>Movies</h1>
+     <!-- PDF -->
+      <h1>PDF</h1>
       <div class="form-group">
       	<label for="post_pdf">Post PDF</label>
         <input  type="file" name="pdf">
